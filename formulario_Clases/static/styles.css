@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(216, 66, 66, 0.576);
+  color: yellow;
+  font-family: "Varela Round", sans-serif;
+  font-size: 16px;
+  
+}
+.box{
+  margin: 20px 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titulo{
+  font-size: 30px;
+  margin: 20px 20px;
+  
+}
+label{
+  font-size: 20px;
+  text-align: right;
+}
+.input{
+  background-color: aquamarine;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  align-items: center;
+  font-size: 20px;
+  width: 20em;
+  text-align: center;
+}
+.button{
+  border-radius: 10px;
+  box-sizing: 20px 30px;
+  padding: 10px 20px;
+  margin: 10px;
+}
+/* .varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */

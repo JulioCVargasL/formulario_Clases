@@ -1,11 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Formulario basado en clases</h1>
+  <h1 class="titulo">Formulario basado en clases</h1>
+  <hr>
+  <form action="{% url "form" %}" method="post" class="box">
+    {% csrf_token %}
+    {{formulario}}
+    <button type="submit" class="button"> > ENVIAR ></button>
+  </form>
 </body>
+
 </html>
