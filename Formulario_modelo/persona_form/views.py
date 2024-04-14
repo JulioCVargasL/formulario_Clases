@@ -5,9 +5,14 @@ from .forms import PersonaForm, DocForm
 
 # Create your views here.
 def create_doc(request):
-  documento = request.POST.get('tipo_doc')
   if request.method == "POST":
-    form = 
+    form = DocForm(request.POST)
+    if form.is_valid():
+      form.save()
+      form = DocForm()
+  else:
+    form = DocForm()
+  return render(request, 'documento.html',{'form':form})
 
 
 def index(request):
@@ -15,9 +20,14 @@ def index(request):
     form = PersonaForm(request.POST)
     if form.is_valid():
       form.save()
+      form = PersonaForm()
       return render(request, 'index.html', {
         'form': form,
       })
+    else:
+      return render(request, 'index.html', {
+      'form' : form,
+      })  
       # return HttpResponse ("Se registro el usuario")
   else :
     form = PersonaForm()

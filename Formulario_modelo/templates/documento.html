@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario Persona</title>
+  <title>formulario Documento</title>
 </head>
 
 <body>
-  <h2>App Persona</h2>
-  <form action="{% url 'index' %}" method="post">
+  <h2>Crear Documento</h2>
+  <form action="{% url 'crear_documento' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <a href="{% url 'crear_documento'%}">Crear documento</a>
+    <a href="{% url 'index' %}">inicio</a>
     <br>
     <button type="submit">Enviar</button>
   </form>

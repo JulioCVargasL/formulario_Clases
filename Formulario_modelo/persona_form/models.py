@@ -10,4 +10,5 @@ class Persona(models.Model):
   nombre    = models.CharField(max_length=50)
   apellido  = models.CharField(max_length=50)
   correo    = models.EmailField()
-  tipo_doc  = models.ForeignKey(Doc_type, on_delete=models.PROTECT, null= False)
+  tipo_doc  = models.ForeignKey(Doc_type, on_delete=models.PROTECT, null= True)
+  documento = models.IntegerField(null=True)
